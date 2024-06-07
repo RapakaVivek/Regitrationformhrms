@@ -1,0 +1,108 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:800px;
+            width: 100%;
+            background-color:#ca24fc;
+        }
+        .main{
+            height:610px;
+            width:400px;
+            background-color:white;
+            margin-left: 450px;
+            padding-top: 10px;
+            border-radius:10px;
+        }
+        .A{
+            text-align: center;
+        }
+        .B{
+            padding-left: 10px;
+        }
+        input{ 
+            border: none;
+            height:30px;
+            width:300px ;
+            margin-left: 20px;
+        }
+        select{
+            margin-left: 20px;
+            border: none;
+        }
+        .button{
+            color: white;
+            height:30px;
+            width:300px;
+            margin-left: 30px;
+            margin-top: 50px;
+            background:linear-gradient(to right, red,blue);
+            border-radius: 10px;
+        }
+        .D{
+            text-align: center;
+        }
+        .logo{
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container"><br><br>
+    <div class="logo">
+        <img src="./company logo.png" height="50px" width="200px">
+    </div>
+    <div class="main">
+       <div class="A">
+         <h3>Register</h3>
+         <p>Access to our dashboard</p>
+       </div>
+       <div class="B">
+        <form>
+            <p>Full Name</p>
+            <input type="text" placeholder="Enter Your Name" id="input1" style="display: none;"><br>
+            <p>Email</p>
+            <input type="text" placeholder="Enter Your Email" id="input2" style="display: none;"><br>
+            <label>
+            <p>Role Name</p>
+            <select id="input3" style="display: none;">
+                <option>--Select Role Name--</option>
+                <option>Web Developer</option>
+                <option>Devops</option>
+                <option>Data Base</option>
+                <option>Software</option>
+            </select>
+            </label><br>
+            <p>Password</p>
+            <input type="text" placeholder="Enter Your Password" id="input4" style="display: none;"><br>
+            <p>Repeat Password</p>
+            <input type="text" placeholder="Choose Repeat Password" id="input5" style="display: none;">
+        </form>
+        <button class="button">Register</button>
+       </div>
+              <div class="D">
+        <p>Already have an account?<a href="Login">Login</a></p>
+       </div>
+    </div>
+  </div>
+  <script>
+
+      var input1 = document.getElementById("input1");
+      var input2 = document.getElementById("input2");
+      var input3 = document.getElementById("input3");
+      var input4 = document.getElementById("input4");
+      var input5 = document.getElementById("input5");
+       input1.addEventListener('keypress',function(e){
+        if(e.keyCode===13)
+        {
+            input2.style.display="block";
+        }
+       });
+
+  </script>  
+</body>
+</html>
